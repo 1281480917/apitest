@@ -1,0 +1,15 @@
+- config:
+    name: demo
+    import_module_functions:
+        - data.case.apitalk
+- test:
+    name: Login
+    variable:
+        - UserName: test001
+        - Password: 123456
+    api: ${api_v1_Account_Login_POST($UserName, $Password)}
+
+- test:
+    name: Logoff
+    api: ${api_v1_Account_LoginOff_GET()}
+
