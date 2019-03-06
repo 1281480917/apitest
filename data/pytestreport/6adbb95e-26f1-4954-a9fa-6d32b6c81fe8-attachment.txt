@@ -1,0 +1,17 @@
+dynamic_execution.py        12 DEBUG    <module 'data.case.debugtalk' from 'E:\\code\\apitest\\data\\case\\debugtalk.py'>
+dynamic_execution.py        14 DEBUG    imported_functions_dict:{'gen_random_string': <function gen_random_string at 0x0000024E140C0400>, 'gen_md5': <function gen_md5 at 0x0000024E140C0488>}
+parser.py                   30 DEBUG    ('gen_random_string', '5')
+dynamic_execution.py        60 DEBUG    function_meta:{'args': [5], 'kwargs': {}, 'func_name': 'gen_random_string'}
+parser.py                   30 DEBUG    ('gen_md5', '$TOKEN, $json, $random')
+dynamic_execution.py        60 DEBUG    function_meta:{'args': ['$TOKEN', '$json', '$random'], 'kwargs': {}, 'func_name': 'gen_md5'}
+parser.py                   30 DEBUG    ('gen_random_string', '5')
+dynamic_execution.py        60 DEBUG    function_meta:{'args': [5], 'kwargs': {}, 'func_name': 'gen_random_string'}
+parser.py                   30 DEBUG    ('gen_md5', '$TOKEN, $json, $random')
+dynamic_execution.py        60 DEBUG    function_meta:{'args': ['$TOKEN', '$json', '$random'], 'kwargs': {}, 'func_name': 'gen_md5'}
+test_runner.py              15 DEBUG    get_eval_value:{'name': 'create user which does not exist', 'import_module_functions': ['data.case.debugtalk'], 'variables': [{'TOKEN': 'debugtalk'}, {'json': {'name': 'user', 'password': '123456'}}, {'random': 'Heus7'}, {'authorization': 'd16262807557a85ab435bd6f4e2bb7a0'}], 'request': {'url': 'http://127.0.0.1:5000/api/users/1000', 'method': 'POST', 'headers': {'Content-Type': 'application/json', 'random': 'yOWzZ', 'authorization': 'fd076b2eca2f5e67f823952f0b5ddf11'}, 'json': {'name': 'user', 'password': '123456'}}, 'response': {'status_code': 201, 'success': 'true,', 'msg': 'user created successfully.'}}
+test_runner.py              16 INFO     执行用例create user which does not exist
+test_runner.py              23 INFO     请求数据:{'headers': {'Content-Type': 'application/json', 'random': '${gen_random_string(5)}', 'authorization': '${gen_md5($TOKEN, $json, $random)}'}, 'json': {'name': 'user', 'password': '123456'}}
+connectionpool.py          205 DEBUG    Starting new HTTP connection (1): 127.0.0.1:5000
+connectionpool.py          393 DEBUG    http://127.0.0.1:5000 "POST /api/users/1000 HTTP/1.1" 401 56
+test_runner.py              25 INFO     响应数据;{"success": false, "msg": "device_sn or token is null."}
+test_runner.py              27 INFO     预期响应与实际响应的差异:{'status_code': {'实际响应': 401, '预期响应': 201}, 'success': {'实际响应': None, '预期响应': 'true,'}, 'msg': {'实际响应': None, '预期响应': 'user created successfully.'}}
