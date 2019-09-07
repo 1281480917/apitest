@@ -1,1 +1,0 @@
-{'test': {'name': 'Login', 'variable': [{'UserName': 'test001'}, {'Password': 123456}], 'api': {'request': {'headers': {'Accept': 'application/json', 'User-Agent': 'iOS/10.3', 'Content-Type': 'application/json'}, 'json': {'UserName': 'test001', 'Pwd': 123456, 'VerCode': ''}}, 'response': {'status_code': 200, 'content.IsSuccess': 'True,', 'content.Code': 200}}}}

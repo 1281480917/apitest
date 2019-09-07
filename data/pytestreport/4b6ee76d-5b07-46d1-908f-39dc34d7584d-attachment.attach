@@ -1,1 +1,0 @@
-{'test': {'name': 'Logoff', 'api': {'request': {'headers': {'Accept': 'application/json', 'User-Agent': 'iOS/10.3', 'Content-Type': 'application/json'}}, 'response': {'status_code': 200, 'content.IsSuccess': 'True,', 'content.Code': 200}}}}
